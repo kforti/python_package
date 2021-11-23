@@ -10,7 +10,7 @@ COMMANDS = {
 
 @click.command()
 @click.option('--name', help='package name')
-@click.option('--author', help='package author')
+@click.option('--author', default='', help='package author')
 @click.argument('command')
 def run_command(command, name, author):
     func = COMMANDS[command]
