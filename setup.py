@@ -4,18 +4,17 @@
 
 from setuptools import setup, find_packages
 
-install_requires = open("requirements.txt").read().strip().split("\n")
+
 requirements = ['Click',
                 'python_dotenv',
-                ] + install_requires
+                ]
 
-test_requires = open("test-requirements.txt").read().strip().split("\n")
 test_requirements = ['pytest>=3',
-                     ] + test_requires
+                     ]
 
 setup(
     author="Kevin Fortier",
-    author_email='kevin@foodspacetech.com',
+    author_email='kevin.r.fortier@gmail.com',
     python_requires='>=3.6',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
