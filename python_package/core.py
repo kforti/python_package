@@ -9,6 +9,9 @@ def create_package(name, author):
     base_path = Path.cwd().joinpath(name)
     base_path.mkdir()
 
+    create_file(base_path.joinpath('requirements.txt'))
+    create_file(base_path.joinpath("test-requirements.txt"))
+
     env_path = base_path.joinpath('env')
     env_path.mkdir()
     dot_env_path = env_path.joinpath('.env')

@@ -1,8 +1,7 @@
 import click
 
 @click.command()
-@click.option('--count', default=1, help='number of greetings')
-@click.argument('name')
-def hello(count, name):
-    for x in range(count):
-        click.echo(f"Hello {{name}}!")
+@click.option('--option', default=None, help='click command option example')
+@click.argument('command')
+def run_command(option, command):
+    click.echo(f"Running {{command}} with option {{option}}!")

@@ -4,11 +4,14 @@
 
 from setuptools import setup, find_packages
 
+install_requires = open("requirements.txt").read().strip().split("\n")
 requirements = ['Click',
                 'python_dotenv',
-                ]
+                ] + install_requires
 
-test_requirements = ['pytest>=3', ]
+test_requires = open("test-requirements.txt").read().strip().split("\n")
+test_requirements = ['pytest>=3',
+                     ] + test_requires
 
 setup(
     author="Kevin Fortier",
