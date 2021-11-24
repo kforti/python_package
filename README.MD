@@ -15,5 +15,7 @@ python_package create --name <name of python package> --author <author of python
 
 Example:
 ```commandline
-python_package create --name python_package --author 'Kevin Fortier'
+python_package create --name test_package --author 'first_name last_name'
+pip install test_package/
+test_package some_command --option some_option
 ```
