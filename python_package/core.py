@@ -17,6 +17,9 @@ def create_package(name, author):
     dot_env_path = env_path.joinpath('.env')
     create_file(dot_env_path)
 
+    base_path.joinpath('scripts').mkdir()
+    base_path.joinpath('tests').mkdir()
+
     src_path = base_path.joinpath(name)
     src_path.mkdir()
     source_files = ['__init__', 'cli']
@@ -37,10 +40,8 @@ def create_file_from_template(template, dest, **kwargs):
         template = f.read()
 
     contents = template.format(**kwargs)
-
     with open(dest, 'w') as f:
         f.write(contents)
-
     return None
 
 
